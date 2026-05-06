@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Glow Experience</title>
+    <link rel="stylesheet" href="newwebsite.css">
+    <script src="newwebsite.js"></script>
+    <style>
+        /* [STYLES BELOW] */
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <form id="multiStepForm">
+            <!-- Step 1: Personal -->
+            <div class="form-step step-active" id="step1">
+                <h1>Personal Identity</h1>
+                <p>Let's start with the basics. Who are you?</p>
+                <div class="row">
+                    <div class="field-group">
+                        <label>First Name <span>*</span></label>
+                        <input type="text" placeholder="Adeeti" required>
+                    </div>
+                    <div class="field-group">
+                        <label>Last Name <span>*</span></label>
+                        <input type="text" placeholder="Gupta" required>
+                    </div>
+                </div>
+                <div class="field-group">
+                    <label>Email Address <span>*</span></label>
+                    <input type="email" placeholder="you@example.com" required>
+                </div>
+                <button type="button" class="btn-continue" onclick="nextStep(2)">Next: Career &rarr;</button>
+            </div>
+
+            <!-- Step 2: Professional -->
+            <div class="form-step" id="step2">
+                <h1>Career Path</h1>
+                <p>Tell us about your professional journey.</p>
+                <div class="field-group">
+                    <label>Current Role</label>
+                    <input type="text" placeholder="Software Engineer">
+                </div>
+                <div class="field-group">
+                    <label>Company / Organization</label>
+                    <input type="text" placeholder="Tech Solutions Inc.">
+                </div>
+                <div class="field-group">
+                    <label>Years of Experience</label>
+                    <input type="number" placeholder="5">
+                </div>
+                <div class="btn-row">
+                    <button type="button" class="btn-back" onclick="nextStep(1)">&larr; Back</button>
+                    <button type="button" class="btn-continue" onclick="nextStep(3)">Next: Interests &rarr;</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Preferences -->
+            <div class="form-step" id="step3">
+                <h1>Digital Palette</h1>
+                <p>Customize your experience and interests.</p>
+                <div class="field-group">
+                    <label>Primary Skillset</label>
+                    <input type="text" placeholder="UI/UX Design, Backend, etc.">
+                </div>
+                <div class="field-group">
+                    <label>Portfolio URL</label>
+                    <input type="url" placeholder="https://be.net/yourname">
+                </div>
+                <div class="btn-row">
+                    <button type="button" class="btn-back" onclick="nextStep(2)">&larr; Back</button>
+                    <button type="button" class="btn-continue" onclick="nextStep(4)">Review &rarr;</button>
+                </div>
+            </div>
+
+            <!-- Step 4: Final Review -->
+            <div class="form-step" id="step4">
+                <h1>Ready to Launch?</h1>
+                <p>Check your details before stepping into the light.</p>
+                <div class="review-box">
+                    <div id="summary"></div>
+                </div>
+                <div class="btn-row">
+                    <button type="button" class="btn-back" onclick="nextStep(3)">&larr; Back</button>
+                    <button type="submit" class="btn-continue">Submit Information</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        /* [JS BELOW] */
+    </script>
+</body>
+
+</html>
